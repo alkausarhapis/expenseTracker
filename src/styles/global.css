@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --highlight: #b7f068;
+    --danger: #ed2f2f;
+    --accent: #1650e0;
+  }
+}
+
+@layer utilities {
+  .text-highlight {
+    color: var(--highlight);
+  }
+
+  .text-danger {
+    color: var(--danger);
+  }
+
+  .text-accent {
+    color: var(--accent);
+  }
+
+  .bg-highlight {
+    background-color: var(--highlight);
+  }
+
+  .bg-danger {
+    background-color: var(--danger);
+  }
+
+  .bg-accent {
+    background-color: var(--accent);
+  }
+}
+
+body {
+  font-family: "Inter";
+  background-color: black;
+  color: white;
+}
+
+.card {
+  @apply rounded-3xl bg-gradient-to-b from-[#222] from-0% via-[#1b1b1b] via-50% to-[#111] to-100% border-4 border-[#5b5b5b];
+}
