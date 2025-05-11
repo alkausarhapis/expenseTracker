@@ -1,0 +1,13 @@
+---
+import Card from "../atoms/Card.astro";
+import MonoText from "../atoms/MonoText.astro";
+import CardDesc from "../atoms/CardDesc.astro";
+
+const date = new Date().toLocaleDateString("id-ID");
+---
+<Card type="linked" customClass="flex flex-col justify-between col-start-3 row-span-2 row-start-2 cursor-pointer text-start hover:opacity-90">
+    <MonoText text={date}></MonoText>
+    <CardDesc>
+        Record </br> Expenses
+    </CardDesc>
+</Card>

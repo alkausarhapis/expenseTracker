@@ -1,0 +1,15 @@
+---
+import BalanceCard from "../molecules/BalanceCard.astro";
+import ExpenseCard from "../molecules/ExpenseCard.astro";
+import HeaderCard from "../molecules/HeaderCard.astro";
+import RecordCard from "../molecules/RecordCard.astro";
+---
+
+<div class="flex items-center justify-center w-screen h-screen overflow-hidden bg-black">
+    <div class="grid grid-cols-3 grid-rows-3 gap-4 text-center grid-auto-rows-min">
+        <HeaderCard></HeaderCard>
+        <BalanceCard balance=200000></BalanceCard>
+        <ExpenseCard expense=1000></ExpenseCard>
+        <RecordCard></RecordCard>
+    </div>
+</div>

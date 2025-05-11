@@ -1,0 +1,11 @@
+---
+import Card from "../atoms/Card.astro";
+import CardDesc from "../atoms/CardDesc.astro";
+const {balance} = Astro.props;
+---
+
+<Card customClass="col-span-2 row-span-1 row-start-2">
+    <CardDesc>
+        Rp {Number(balance).toLocaleString("id-ID")}
+    </CardDesc>
+</Card>
