@@ -1,13 +1,14 @@
 ---
-const {customClass, type = "default"} = Astro.props;
+const {customClass, type = "default", route} = Astro.props;
 ---
 
-<div id={type} class=`p-10 card ${customClass}`>
+<div id={type} class=`p-10 card ${customClass}` data-route={route}>
     <slot/>
 </div>
 
 <script>
-    document.getElementById("linked").addEventListener('click', () => {
-        window.location.href = "/home"
+    const card = document.getElementById("linked");
+    card.addEventListener('click', () => {
+        window.location.href = card.dataset.route;
     });
 </script>
